@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #252525;
+    --bg-points: #1e1e1e;
+    --container: #2e2e2e;
+    --header: #FFE66D;
+    --paragraphs: #999999;
+    --points: #f9f9f9;
+    --underline: rgba(0, 0, 0, .3);
+    --user-number-header: #43AA8B;
+}
+
+body {
+    background-color: var(--bg);
+    text-align: center;
+}
+
+/* underlines */
+.underline {
+    height: 5px;
+    width: 100%;
+    border-radius: 50px;
+    background-color: var(--underline);
+    margin: 1rem 0;
+}
+
+/* container */
+
+.container {
+    display: flex;
+    height: 75vh;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+
+/* game box */
+.container__game {
+    background-color: var(--container);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30vw;
+    border-radius: 50px 0 0 50px;
+}
+
+/* header of name of the game */
+.container__game__welcome h1 {
+    color: var(--header);
+    font-size: 48px;
+}
+
+/* entering number */
+.container__game__number h2 {
+    color: var(--user-number-header);
+    margin-bottom: 1rem;
+    font-size: 32px;
+}
+
+/* info about game */
+.container__game__welcome p {
+    font-size: 16px;
+    color: var(--paragraphs);
+}
+
+/* aria for number */
+.container__game__number input {
+    width: 50%;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--bg-points);
+    color: var(--points);
+}
+
+/* guess button */
+.container__gamae__guess-button button {
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--bg-points);
+    color: var(--points);
+    cursor: pointer;
+}
+
+/* points bar */
+.container__points {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 15vw;
+    background-color: var(--bg-points);
+    border-radius: 0 50px 50px 0;
+}
+
+/* score bar */
+.container__points_welcome h1 {
+    color: var(--header);
+    font-size: 32px;    
+}
+
+/* pints bar paragraphs */
+.container__points__score-bar p {
+    font-size: 18px;
+    color: var(--points);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* user points */
+.container__points__user-points h3 {
+    color: var(--user-number-header);
+    font-size: 24px;
+}
+
+.container__points__user-points p {
+    font-size: 20px;
+    color: var(--points);
+}
+
+/* MEDIA QUERIES for: 1024px */
+@media only screen and (max-width: 1024px) {
+
+    .container__game {
+        width: 50vw;
+    }
+
+    .container__points {
+        width: 25vw;
+    }
+    
+}
+
+/* MEDIA QUERIES for: 425px */
+@media only screen and (max-width: 426px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container__game {
+        width: 90vw;
+        height: 750vh;
+        border-radius: 50px 50px 0 0;
+    }
+
+    .container__game__welcome h1 {
+        font-size: 32px;
+    }
+
+    .container__points {
+        width: 90vw;
+        height: 30vh;
+        display: flex;
+        flex-direction: row;
+        border-radius: 0 0 50px 50px;
+    }
+
+    .container__points h1 {
+        font-size: 24px;
+        margin: 0 auto;
+    }
+
+    .container__points p {
+        font-size: 11px;
+    }
+
+    .container__points h3 {
+        font-size: 18px;
+    }
+
+}
