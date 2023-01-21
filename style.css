@@ -6,13 +6,14 @@
 
 :root {
     --bg: #252525;
-    --bg-points: #1e1e1e;
-    --container: #2e2e2e;
-    --header: #FFE66D;
-    --paragraphs: #999999;
-    --points: #f9f9f9;
-    --underline: rgba(0, 0, 0, .3);
-    --user-number-header: #43AA8B;
+    --bg-points: #353535;
+    --button: #FFBE75;
+    --header: #E6E6E6;
+    --paragraphs: #FFF;
+    --points: #E6E6E6;
+    --underline: #fff;
+    --user-number-header: #FFBE75;
+    --brown: #25171A;
 }
 
 body {
@@ -43,7 +44,7 @@ body {
 
 /* game box */
 .container__game {
-    background-color: var(--container);
+    background-color: var(--bg-points);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -78,20 +79,21 @@ body {
     text-align: center;
     border-radius: 50px;
     border: none;
-    background-color: var(--bg-points);
-    color: var(--points);
+    background-color: var(--button);
+    color: var(--brown);
 }
 
-/* guess button */
+/* guess  */
 .container__gamae__guess-button button {
     width: 50%;
     height: 50px;
     font-size: 20px;
+    font-weight: bold;
     text-align: center;
     border-radius: 50px;
     border: none;
-    background-color: var(--bg-points);
-    color: var(--points);
+    background-color: var(--button);
+    color: var(--brown);
     cursor: pointer;
 }
 
@@ -111,12 +113,12 @@ body {
     font-size: 32px;    
 }
 
-/* pints bar paragraphs */
+/* points bar paragraphs */
 .container__points__score-bar p {
     font-size: 18px;
     color: var(--points);
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* user points */

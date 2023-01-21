@@ -1,7 +1,10 @@
 let rand = Math.floor(Math.random() * 100 + 1)
 let counter = 0;
 let score = 0;
+let round = 1;
 const checkButton = document.querySelector('#check-button')
+
+document.getElementById("user-round").innerHTML = round
 
 checkButton.addEventListener("click", function(){
     counter++;
@@ -36,9 +39,11 @@ function play() {
          }, 3000);
          setTimeout(() => { 
             document.getElementById("system-message").innerHTML = "1..."
-            document.getElementById("user-number").value = "";
          }, 4000);
-        setTimeout(() => { playAgain() }, 5000);
+        setTimeout(() => { 
+            document.getElementById("user-number").value = "";
+            playAgain()
+        }, 5000);
     } else {
         message = "You're number is too small";
     }
@@ -49,11 +54,15 @@ function play() {
 
 function playAgain() {
     rand = Math.floor(Math.random() * 100 + 1)
+    // console.log(round, ". Random number: ", rand)
 
     counter = 0;
     document.getElementById("user-try").innerHTML = counter
 
+    round++;
     play()
 
     document.getElementById("system-message").innerHTML = "Enter you're number"
+    document.getElementById("user-round").innerHTML = round
 }
+// console.log(round, ". Random number: ", rand)
